@@ -4,6 +4,8 @@ Sumoylation is the post-translational modification that is involved in the adapt
 
 ############ Some remarks on used python code files ###########
 
+The "Dataset" directory includes the positive and negative sequences files in fasta format.
+
 The script in app.py is critical for controlling the overall functionality of the webserver. It includes all the necessary procedures that are used to interact with the user and perform operations requested upon input and navigations.
 
 The script in extractFeatures.py includes all the important procedures that compute the features from the given protein sequences and make predictions based on the trained models using "iSumoK_Model.pkl" file. Furthermore, this python script also includes all the implementations of processes used to implement statistical moments.
