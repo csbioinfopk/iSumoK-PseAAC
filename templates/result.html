@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<font size="9" color="red">Results</font>
+<br>
+	<font size="4" face="Courier, Pica, Monospace"></font>
+	{% if 'Inv' not in result[0] %}
+	<table class="table">
+
+	<tbody>
+			{% if 'Negative' in result[1]%}
+			<tr class="warning">
+				<font size="7" color="red">{{result[1]}}</font>
+			</tr>
+			{% else %}
+			<tr class="success">
+				<font size="7" color="green">{{result[1]}}</font>
+			</tr>
+			{% endif %}
+		</tbody>
+</table>
+{% else %}
+
+	<font size="5">{{result[0]}}</font>
+
+{% endif %}
+
+</br>
+<button class="btn btn-primary" style="margin-bottom: 3%;" onclick="history.back()">Back</button>
+
+{% endblock %}

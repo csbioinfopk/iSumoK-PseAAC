@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div>
+  <h1 style="text-align: center;">iSumoK-PseAAC: Identify lysine summoylation sites using Statistical Moments and PseAAC</h1>
+<div class="panel panel-success">
+      <div style="text-align: justify;" class="panel-heading">Description</div>
+      <div class="panel-body">SUMOylation is a post translational modification that involved in the adaption of cells and functional properties of a large number of proteins. Sumoylation has a key importance in sub cellular concentration, transcriptional synchronization, chromatin remodeling, response to stress, and regulation of mitosis.</div>
+      <div class="panel-footer">
+        In this study, we introduced novel method to predict the Sumolyation sites in the sequences of proteins called as SUMOk-PseAAc with the help of relative position based features by combining the Chou's Pseudo Amino Acid Composition (PseAAC)
+      </div>
+    </div>
+
+      {% from "includes/_formhelpers.html" import render_field %}
+  <form method="POST" action="">
+    <div class="form-group">
+      {{render_field(form.sequence, class_="form-control", style="width: 100%;height: 100px;")}}
+    </div>
+    <p><input type="submit" class="btn btn-primary" value="Submit Sequence"></p>
+  </form>
+
+  </div>
+
+{% endblock %}
+
